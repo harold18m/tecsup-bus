@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -6,9 +5,6 @@ import { ArrowRight, MapPin, Bus, CalendarClock, QrCode } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-
-// Add framer-motion as a dependency
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
 
 const Index: React.FC = () => {
   const features = [
@@ -59,7 +55,6 @@ const Index: React.FC = () => {
       <Navbar />
       
       <main className="flex-grow pt-16">
-        {/* Hero Section */}
         <section className="relative bg-gray-50 overflow-hidden">
           <div 
             className="absolute inset-0 bg-dot-pattern bg-dot-small opacity-50"
@@ -113,7 +108,6 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
@@ -153,7 +147,6 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-5xl mx-auto bg-gradient-to-br from-tecsup to-blue-400 rounded-2xl overflow-hidden shadow-lg">
