@@ -10,7 +10,7 @@ import RouteMap from '@/components/routes/RouteMap';
 import RoutesList from '@/components/routes/RoutesList';
 import { TimeOfDay, RouteData } from '@/types';
 
-const Routes: React.FC = () => {
+const RoutesExplorer: React.FC = () => {
   const [selectedTimeOfDay, setSelectedTimeOfDay] = useState<TimeOfDay>('morning');
   const [selectedRouteId, setSelectedRouteId] = useState<string | null>(null);
 
@@ -122,4 +122,4 @@ const Routes: React.FC = () => {
   );
 };
 
-export default Routes;
+export default RoutesExplorer;
