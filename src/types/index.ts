@@ -87,3 +87,16 @@ export interface AuthContextType {
   logout: () => Promise<void>;
   register: (email: string, password: string, name: string, role: UserRole) => Promise<void>;
 }
+
+// New types for routes explorer
+export type TimeOfDay = 'morning' | 'afternoon' | 'night';
+
+export interface RouteData extends Route {
+  id: string;
+}
+
+export interface RoutesByTimeOfDay {
+  morning: RouteData[];
+  afternoon: RouteData[];
+  night: RouteData[];
+}
