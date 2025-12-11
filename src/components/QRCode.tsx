@@ -9,6 +9,11 @@ interface QRCodeProps {
   className?: string;
 }
 
+const pseudoRandom01 = (seed: number) => {
+  const value = (seed * 9301 + 49297) % 233280;
+  return value / 233280;
+};
+
 const QRCode: React.FC<QRCodeProps> = ({ value, size = 200, className = '' }) => {
   // In a real app, we would use a QR code library
   // For this prototype, we'll simulate a QR code with a placeholder
@@ -24,7 +29,7 @@ const QRCode: React.FC<QRCodeProps> = ({ value, size = 200, className = '' }) =>
               {Array.from({ length: 16 }).map((_, i) => (
                 <div
                   key={i}
-                  className={`${Math.random() > 0.5 ? 'bg-black' : 'bg-transparent'} 
+                  className={`${pseudoRandom01(i) > 0.5 ? 'bg-black' : 'bg-transparent'} 
                   ${[0, 3, 12, 15].includes(i) ? 'bg-black' : ''}`}
                 />
               ))}

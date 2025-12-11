@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -131,10 +132,10 @@ export default {
 				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'float': 'float 3s ease-in-out infinite'
 			},
-            fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-                display: ['Poppins', 'system-ui', 'sans-serif']
-            },
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Poppins', 'system-ui', 'sans-serif']
+			},
 			boxShadow: {
 				glass: '0 4px 30px rgba(0, 0, 0, 0.1)',
 				subtle: '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
@@ -152,5 +153,5 @@ export default {
 			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;

@@ -31,6 +31,8 @@ const sampleRoute: Route = {
     status: 'active',
 };
 
+const DEMO_NOW_MS = Date.parse('2025-01-01T00:00:00.000Z');
+
 export default function Dashboard() {
     const { user, loading } = useAuth();
     const router = useRouter();
@@ -172,7 +174,7 @@ function AdminDashboard() {
                                     <div>
                                         <p className="text-sm font-medium">New user registered</p>
                                         <p className="text-xs text-gray-500">
-                                            {new Date(Date.now() - 1000 * 60 * 60 * i).toLocaleString()}
+                                            {new Date(DEMO_NOW_MS - 1000 * 60 * 60 * i).toLocaleString()}
                                         </p>
                                     </div>
                                 </div>
@@ -241,7 +243,7 @@ function DriverDashboard() {
                                     <div key={i} className="p-3 bg-gray-50 rounded-md border border-gray-100 flex justify-between">
                                         <span className="text-sm">Passenger #{12345 + i}</span>
                                         <span className="text-xs text-gray-500">
-                                            {new Date(Date.now() - 1000 * 60 * 10 * i).toLocaleTimeString()}
+                                            {new Date(DEMO_NOW_MS - 1000 * 60 * 10 * i).toLocaleTimeString()}
                                         </span>
                                     </div>
                                 ))}
@@ -319,7 +321,7 @@ function PassengerDashboard() {
                                             <div>
                                                 <h4 className="font-medium">Campus to Downtown</h4>
                                                 <p className="text-sm text-gray-500">
-                                                    {new Date(Date.now() - 1000 * 60 * 60 * 24 * i).toLocaleDateString()}
+                                                    {new Date(DEMO_NOW_MS - 1000 * 60 * 60 * 24 * i).toLocaleDateString()}
                                                 </p>
                                             </div>
                                             <span className="text-xs bg-gray-100 rounded-full px-2 py-1">
