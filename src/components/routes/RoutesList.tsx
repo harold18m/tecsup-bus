@@ -1,3 +1,4 @@
+'use client';
 
 import React from 'react';
 import { MapPin, Clock } from 'lucide-react';
@@ -11,13 +12,13 @@ interface RoutesListProps {
   selectedRouteId: string | null;
 }
 
-const RoutesList: React.FC<RoutesListProps> = ({ 
-  timeOfDay, 
+const RoutesList: React.FC<RoutesListProps> = ({
+  timeOfDay,
   onRouteSelect,
   selectedRouteId
 }) => {
   const routes = getAllRoutes()[timeOfDay];
-  
+
   return (
     <div className="space-y-4">
       {routes.length === 0 ? (
@@ -26,13 +27,12 @@ const RoutesList: React.FC<RoutesListProps> = ({
         </div>
       ) : (
         routes.map((route) => (
-          <div 
-            key={route.id} 
-            className={`p-4 border rounded-md transition-colors ${
-              selectedRouteId === route.id 
-                ? 'border-tecsup bg-tecsup/5' 
-                : 'hover:border-tecsup-light/50'
-            }`}
+          <div
+            key={route.id}
+            className={`p-4 border rounded-md transition-colors ${selectedRouteId === route.id
+              ? 'border-tecsup bg-tecsup/5'
+              : 'hover:border-tecsup-light/50'
+              }`}
           >
             <div className="flex justify-between items-start">
               <div>
@@ -42,8 +42,8 @@ const RoutesList: React.FC<RoutesListProps> = ({
                   <p>{route.startPoint} → {route.endPoint}</p>
                 </div>
               </div>
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant={selectedRouteId === route.id ? "default" : "outline"}
                 className={selectedRouteId === route.id ? "bg-tecsup hover:bg-tecsup-dark text-white" : "border-tecsup text-tecsup hover:bg-tecsup/5"}
                 onClick={() => onRouteSelect(route.id)}

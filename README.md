@@ -1,69 +1,156 @@
-# Welcome to your Lovable project
+# Tecsup Bus - Sistema de Transporte Universitario
 
-## Project info
+Este proyecto ha sido migrado de **Vite + React** a **Next.js 16** con App Router.
 
-**URL**: https://lovable.dev/projects/62601e53-966f-4661-90b9-dc65f89d2b65
+## 🚀 Características
 
-## How can I edit this code?
+- ✅ Next.js 16 con App Router
+- ✅ TypeScript
+- ✅ Tailwind CSS
+- ✅ Shadcn/ui Components
+- ✅ Framer Motion para animaciones
+- ✅ React Query para gestión de estado del servidor
+- ✅ Sistema de autenticación con Context API
 
-There are several ways of editing your application.
+## 📦 Instalación
 
-**Use Lovable**
+```bash
+# Instalar dependencias
+bun install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/62601e53-966f-4661-90b9-dc65f89d2b65) and start prompting.
+# o con npm
+npm install
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# o con yarn
+yarn install
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Desarrollo
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Iniciar servidor de desarrollo
+bun run dev
 
-**Use GitHub Codespaces**
+# o con npm
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# o con yarn
+yarn dev
+```
 
-## What technologies are used for this project?
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-This project is built with .
+## 🏗️ Build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+# Crear build de producción
+bun run build
 
-## How can I deploy this project?
+# Iniciar servidor de producción
+bun run start
+```
 
-Simply open [Lovable](https://lovable.dev/projects/62601e53-966f-4661-90b9-dc65f89d2b65) and click on Share -> Publish.
+## 📁 Estructura del Proyecto
 
-## I want to use a custom domain - is that possible?
+```
+tecsup-bus/
+├── app/                      # Directorio App Router de Next.js
+│   ├── layout.tsx           # Layout principal
+│   ├── page.tsx             # Página de inicio
+│   ├── providers.tsx        # Providers de la aplicación
+│   ├── globals.css          # Estilos globales
+│   ├── login/               # Página de login
+│   ├── dashboard/           # Dashboard
+│   ├── routes/              # Explorador de rutas
+│   └── not-found.tsx        # Página 404
+├── src/
+│   ├── components/          # Componentes reutilizables
+│   │   ├── ui/             # Componentes de UI (Shadcn)
+│   │   ├── layout/         # Componentes de layout (Navbar, Footer)
+│   │   ├── routes/         # Componentes de rutas
+│   │   └── dashboard/      # Componentes del dashboard
+│   ├── context/            # Contextos de React
+│   ├── data/               # Datos y configuración
+│   ├── hooks/              # Custom hooks
+│   ├── lib/                # Utilidades
+│   └── types/              # Tipos de TypeScript
+├── public/                 # Archivos estáticos
+└── next.config.js         # Configuración de Next.js
+```
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 🔄 Cambios Principales en la Migración
+
+### De Vite a Next.js
+
+1. **Routing**: 
+   - ❌ `react-router-dom` 
+   - ✅ Next.js App Router
+
+2. **Navegación**:
+   - ❌ `<Link to="/path">` 
+   - ✅ `<Link href="/path">`
+   - ❌ `useNavigate()` 
+   - ✅ `useRouter()` from `next/navigation`
+
+3. **Componentes del Cliente**:
+   - Todos los componentes interactivos necesitan `'use client'` en la parte superior
+
+4. **Estructura de Archivos**:
+   - ❌ `src/pages/` 
+   - ✅ `app/` con archivos `page.tsx`
+   - ❌ `index.html` 
+   - ✅ `app/layout.tsx`
+
+5. **Scripts**:
+   - ❌ `vite dev` 
+   - ✅ `next dev`
+   - ❌ `vite build` 
+   - ✅ `next build`
+
+## 🔑 Credenciales de Demo
+
+Para probar la aplicación, usa las siguientes credenciales:
+
+- **Admin**: 
+  - Email: `admin@tecsup.edu.pe`
+  - Password: `admin123`
+
+- **Driver**: 
+  - Email: `driver@tecsup.edu.pe`
+  - Password: `driver123`
+
+- **Passenger**: 
+  - Email: `passenger@tecsup.edu.pe`
+  - Password: `passenger123`
+
+## 📚 Tecnologías Utilizadas
+
+- [Next.js 16](https://nextjs.org/) - Framework de React
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
+- [Shadcn/ui](https://ui.shadcn.com/) - Componentes de UI
+- [Framer Motion](https://www.framer.com/motion/) - Animaciones
+- [React Query](https://tanstack.com/query) - Gestión de estado del servidor
+- [Lucide React](https://lucide.dev/) - Iconos
+
+## 📝 Notas de Migración
+
+- Los archivos originales de Vite se movieron a `.backup`:
+  - `index.html.backup`
+  - `vite.config.ts.backup`
+  - `src/main.tsx.backup`
+  - `src/App.tsx.backup`
+  - `src/pages.backup/`
+  - `tsconfig.json.backup`
+
+- Se mantienen todos los componentes UI de Shadcn en `src/components/ui/`
+- El contexto de autenticación se actualizó para funcionar con Next.js
+- Los componentes de layout (Navbar, Footer) se adaptaron para usar Next.js Link
+
+## 🤝 Contribución
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias o mejoras.
+
+## 📄 Licencia
+
+© 2024 Penguins on Road for Tecsup. Todos los derechos reservados.

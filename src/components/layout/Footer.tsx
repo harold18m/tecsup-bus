@@ -1,6 +1,7 @@
+'use client';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
 
 const Footer: React.FC = () => {
@@ -14,59 +15,59 @@ const Footer: React.FC = () => {
               Simplifying transportation for Tecsup students and staff through innovative technology solutions.
             </p>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-gray-800 font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/about" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/routes" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/routes" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Routes
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/login" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Login
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-gray-800 font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/faq" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/faq" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/help" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/help" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/privacy" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
+                <Link href="/terms" className="text-gray-600 hover:text-tecsup text-sm transition-colors">
                   Terms of Service
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-gray-800 font-semibold mb-4">Contact</h3>
             <address className="not-italic text-sm text-gray-600 space-y-2">
@@ -85,40 +86,40 @@ const Footer: React.FC = () => {
             </address>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-6 border-t border-gray-100">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} Penguins on Road for Tecsup. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-4">
-              <a 
-                href="https://facebook.com/tecsup" 
-                target="_blank" 
+              <a
+                href="https://facebook.com/tecsup"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-tecsup transition-colors"
               >
                 Facebook
               </a>
-              <a 
-                href="https://twitter.com/tecsup" 
-                target="_blank" 
+              <a
+                href="https://twitter.com/tecsup"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-tecsup transition-colors"
               >
                 Twitter
               </a>
-              <a 
-                href="https://instagram.com/tecsup" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/tecsup"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-tecsup transition-colors"
               >
                 Instagram
               </a>
-              <a 
-                href="https://linkedin.com/company/tecsup" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com/company/tecsup"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-tecsup transition-colors"
               >

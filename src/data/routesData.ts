@@ -1,5 +1,5 @@
 
-import { RoutesByTimeOfDay } from '@/types';
+import { RoutesByTimeOfDay } from '@/src/types';
 
 // This function provides all routes data organized by time of day
 export const getAllRoutes = (): RoutesByTimeOfDay => {
@@ -37,7 +37,7 @@ export const getAllRoutes = (): RoutesByTimeOfDay => {
         status: 'active',
       }
     ],
-    
+
     afternoon: [
       {
         id: 'afternoon-1',
@@ -116,7 +116,7 @@ export const getAllRoutes = (): RoutesByTimeOfDay => {
         status: 'active',
       }
     ],
-    
+
     night: [
       {
         id: 'night-1',

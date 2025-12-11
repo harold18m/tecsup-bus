@@ -1,6 +1,7 @@
+'use client';
 
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { User, UserRole, AuthContextType } from '@/types';
+import { User, UserRole, AuthContextType } from '@/src/types';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -46,16 +47,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = async (email: string, password: string) => {
     setLoading(true);
     setError(null);
-    
+
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Find user with matching credentials
       const foundUser = MOCK_USERS.find(
         (u) => u.email === email && u.password === password
       );
-      
+
       if (foundUser) {
         const { password, ...userWithoutPassword } = foundUser;
         setUser(userWithoutPassword as User);
@@ -76,7 +77,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
+
       localStorage.removeItem('penguinsOnRoadUser');
       setUser(null);
     } catch (err) {
@@ -90,16 +91,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const register = async (email: string, password: string, name: string, role: UserRole) => {
     setLoading(true);
     setError(null);
-    
+
     try {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Check if user already exists
       if (MOCK_USERS.some((u) => u.email === email)) {
         throw new Error('User with this email already exists');
       }
-      
+
       // In a real app, this would send data to a backend service
       // For now, we'll just simulate a successful registration
       const newUser = {
@@ -108,7 +109,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         email,
         role,
       };
-      
+
       setUser(newUser);
       localStorage.setItem('penguinsOnRoadUser', JSON.stringify(newUser));
     } catch (err) {

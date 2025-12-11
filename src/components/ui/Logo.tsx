@@ -1,6 +1,7 @@
+'use client';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface LogoProps {
   className?: string;
@@ -9,22 +10,22 @@ interface LogoProps {
   showText?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ 
-  className = '', 
+const Logo: React.FC<LogoProps> = ({
+  className = '',
   textClassName = '',
-  onClick, 
-  showText = true 
+  onClick,
+  showText = true
 }) => {
   return (
-    <Link 
-      to="/" 
+    <Link
+      href="/"
       className={`flex items-center space-x-2 ${className}`}
       onClick={onClick}
     >
-      <img 
-        src="/lovable-uploads/3c06a21a-fe6e-41cf-bb86-8d4aa5207a5b.png" 
-        alt="Tecsup Logo" 
-        className="h-10 w-auto transition-transform duration-300 ease-in-out hover:scale-105" 
+      <img
+        src="/lovable-uploads/3c06a21a-fe6e-41cf-bb86-8d4aa5207a5b.png"
+        alt="Tecsup Logo"
+        className="h-10 w-auto transition-transform duration-300 ease-in-out hover:scale-105"
       />
       {showText && (
         <div className={`flex flex-col items-start ${textClassName}`}>
