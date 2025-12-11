@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 interface LogoProps {
   className?: string;
   textClassName?: string;
@@ -22,9 +22,11 @@ const Logo: React.FC<LogoProps> = ({
       className={`flex items-center space-x-2 ${className}`}
       onClick={onClick}
     >
-      <img
+      <Image
         src="/lovable-uploads/3c06a21a-fe6e-41cf-bb86-8d4aa5207a5b.png"
         alt="Tecsup Logo"
+        width={40}
+        height={40}
         className="h-10 w-auto transition-transform duration-300 ease-in-out hover:scale-105"
       />
       {showText && (
